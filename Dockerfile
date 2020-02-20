@@ -6,9 +6,9 @@ RUN \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list && \
   wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   apt-get update && \
-  apt-get install -yqq nodejs yarn && \
+  apt-get upgrade -y && \
+  apt-get install -yqq nodejs yarn jq && \
   pip install -U pip && pip install pipenv && \
   npm i -g npm@^6 && \
+  npm i -g netlify-cli && \
   rm -rf /var/lib/apt/lists/*
-
-RUN apt-get install jq -y && npm install netlify-cli -g
