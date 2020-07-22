@@ -10,5 +10,5 @@ RUN \
   apt-get install -yqq nodejs yarn jq && \
   pip install -U pip && pip install pipenv && \
   npm i -g npm@^6 && \
-  npm i -g netlify-cli && \
+  npm i -g netlify-cli@2.58.0 && \
   rm -rf /var/lib/apt/lists/*
